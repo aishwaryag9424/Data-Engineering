@@ -30,3 +30,20 @@ Example:
 
 ## Best format to store your data?
 Storing the data depends on how we are accessing the end result. For example if you want to know total sales or total items sold, which are some aggregation focused on some particular column then it is prefered to store in column based format. But if some ML model or data analysis such as how a product is sold and what is the user behavior when he is buying things, in this case row based format is preferred.
+
+• JSON is the standard for communication on the Internet, but in most tests, it proved to be the worst format to use.
+
+• Parquet and Avro are more optimized for Big Data, but readability and writing speed are quite poor.
+
+• Parquet is the best choice for performance when choosing a data storage format in Hadoop, considering factors like integration with third-party applications, schema evolution, and support for specific data types.
+
+• Compression algorithms play a significant role in reducing the amount of data and improving performance.
+
+• Apache Avro is a fast universal encoder for structured data, guaranteeing good performance when accessing all the attributes of a record at the same time.
+
+• CSV is typically the fastest to write, JSON the easiest to understand for humans, and Parquet the fastest to read a subset of columns, while Avro is the fastest to read all columns at once.
+
+• Columnar formats like Parquet are suitable for fast data ingestion, fast random data retrieval, and scalable data analytics.
+
+• Avro is usually used to store raw data, and Parquet is used for further analytics after preprocessing, where not all fields are required.
+
